@@ -152,6 +152,13 @@ public class MainActivity extends AppCompatActivity {
     }
 public void updateLocation(){
         try {
+            locationObject=locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+            if(locationObject!=null){
+                latitude=locationObject.getLatitude();
+                longitude=locationObject.getLongitude();
+                loc_func();
+                Log.d(TAG,"Hey");
+            }
             if(!isLocationEnabled(MainActivity.this)) {
                 Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
                 startActivity(intent);
@@ -282,5 +289,6 @@ public void updateLocation(){
             }
         }.start();
     }
+
 }
 
