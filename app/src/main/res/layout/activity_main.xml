@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Last Updated at 8 hrs ago"
+        android:text="Last Updated 8 hrs ago"
 
         android:textColor="@color/text1"
         android:textSize="20dp"
